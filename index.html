@@ -1,8 +1,12 @@
+
 <!DOCTYPE html>
 <html lang="it">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Cookiebot (consenso cookie) - deve restare il PRIMO script del head -->
+  <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="96f6b64e-50a9-44e4-8144-28cab5bf46bd" data-blockingmode="auto" type="text/javascript"></script>
 
   <title>Riccardo Corsano — Consulente Marketing Brianza</title>
   <meta name="description" content="Lavoro con imprenditori della Brianza per trasformare il marketing da costo a leva di crescita. Pochi clienti, seguiti bene. Risultati misurabili." />
@@ -953,11 +957,21 @@ button { font-family: inherit; cursor: pointer; }
     });
     if (!valid) { if (firstInvalid) firstInvalid.focus(); return; }
 
-    /* TODO: inviare i dati all'endpoint GoHighLevel / webhook
-       fetch("ENDPOINT_URL", { method: "POST", body: new FormData(form) }); */
+    // === Invio lead al Google Sheet ===
+    // Incolla qui l'URL /exec dell'App Web di Google Apps Script (vedi google-apps-script.gs)
+    var SHEET_ENDPOINT = "INCOLLA_QUI_URL_APPS_SCRIPT";
 
-    form.hidden = true;
-    if (success) { success.hidden = false; success.scrollIntoView({ behavior: "smooth", block: "center" }); }
+    var goToThankYou = function () { window.location.href = "grazie.html"; };
+
+    if (SHEET_ENDPOINT.indexOf("http") === 0) {
+      // URLSearchParams = richiesta "semplice": niente problemi di CORS con Apps Script
+      fetch(SHEET_ENDPOINT, { method: "POST", body: new URLSearchParams(new FormData(form)) })
+        .then(goToThankYou)
+        .catch(goToThankYou);
+    } else {
+      // Endpoint non ancora configurato: vai comunque alla thank-you page
+      goToThankYou();
+    }
   });
 })();
   </script>
