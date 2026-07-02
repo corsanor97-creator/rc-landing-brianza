@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Cookiebot (consenso cookie) - deve restare il PRIMO script del head -->
+  <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="96f6b64e-50a9-44e4-8144-28cab5bf46bd" data-blockingmode="auto" type="text/javascript"></script>
+
+  <title>Grazie — Riccardo Corsano</title>
+  <meta name="description" content="Richiesta inviata. Ti contatter&ograve; io, direttamente." />
+  <meta name="robots" content="noindex" />
+
+  <!-- Fonts: Chivo (display) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,400;0,700;0,900;1,400;1,900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- TODO: qui far scattare la conversione (Meta Pixel / GA4) al load della thank-you page -->
+
+  <style>
+:root {
+  --black: #1a1a1a;
+  --white: #ffffff;
+  --gold: #f3ca5b;
+  --gold-dark: #c99a2e;
+  --ink: #1a1a1a;
+  --ink-soft: #57564f;
+  --paper-soft: #f2efe6;
+  --line: #e6e2d8;
+  --radius: 10px;
+  --radius-lg: 16px;
+  --font-display: "Chivo", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --shadow-soft: 0 20px 60px rgba(26, 26, 26, 0.10);
+}
+*, *::before, *::after { box-sizing: border-box; }
+body {
+  margin: 0; font-family: var(--font-body); font-size: 18px; line-height: 1.75;
+  color: var(--ink); background: var(--paper-soft);
+  -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
+}
+.page { max-width: 720px; margin-inline: auto; padding: 40px 24px 80px; }
+
+/* header brand */
+.brand {
+  text-align: center; font-family: var(--font-display); font-weight: 900;
+  font-size: 20px; letter-spacing: -0.01em; color: var(--ink); margin-bottom: 32px;
+}
+.brand .dot { color: var(--gold-dark); }
+
+/* riquadro conferma */
+.confirm {
+  text-align: center; background: var(--white); border: 1px solid var(--line);
+  border-top: 4px solid var(--gold); border-radius: var(--radius-lg);
+  padding: 40px 28px; box-shadow: var(--shadow-soft); margin-bottom: 44px;
+}
+.confirm__check {
+  width: 56px; height: 56px; border-radius: 50%; margin: 0 auto 18px;
+  background: rgba(243, 202, 91, 0.16); color: var(--gold-dark);
+  display: grid; place-items: center; font-size: 28px; font-weight: 800;
+}
+.confirm__title {
+  font-family: var(--font-display); font-weight: 900; font-size: clamp(28px, 5vw, 38px);
+  letter-spacing: -0.02em; margin: 0 0 8px;
+}
+.confirm__sub { color: var(--ink-soft); margin: 0; font-size: 17px; }
+
+/* lettera */
+.letter {
+  background: var(--white); border: 1px solid var(--line); border-radius: var(--radius-lg);
+  padding: clamp(28px, 5vw, 56px); box-shadow: var(--shadow-soft);
+}
+.letter__salut {
+  font-family: var(--font-display); font-weight: 900; font-size: clamp(22px, 3.4vw, 28px);
+  letter-spacing: -0.02em; margin: 0 0 24px; line-height: 1.2;
+}
+.letter p { margin: 0 0 22px; }
+.letter p:last-of-type { margin-bottom: 0; }
+.letter strong { font-weight: 700; color: var(--ink); }
+.letter .lead { font-size: 20px; font-weight: 500; }
+.letter .hl { box-shadow: inset 0 -0.4em 0 rgba(243, 202, 91, 0.4); }
+
+.letter blockquote {
+  margin: 34px 0; padding: 22px 26px; border-left: 3px solid var(--gold);
+  background: var(--paper-soft); border-radius: 0 var(--radius) var(--radius) 0;
+  font-family: var(--font-display); font-style: italic; font-weight: 400;
+  font-size: clamp(19px, 2.6vw, 23px); line-height: 1.4; color: var(--ink);
+}
+
+.letter__sign { margin-top: 34px; }
+.letter__sign .bye { margin-bottom: 4px; color: var(--ink-soft); }
+.letter__sign .name {
+  font-family: var(--font-display); font-weight: 900; font-size: 26px;
+  letter-spacing: -0.01em; color: var(--ink);
+}
+.letter__signimg { height: 70px; width: auto; margin-top: 6px; display: block; }
+
+.back { display: block; text-align: center; margin-top: 40px; font-size: 15px; color: var(--ink-soft); text-decoration: none; }
+.back:hover { color: var(--ink); }
+
+@media (max-width: 560px) {
+  body { font-size: 16px; }
+  .page { padding: 28px 18px 60px; }
+  .letter .lead { font-size: 18px; }
+}
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <p class="brand">Riccardo Corsano<span class="dot">.</span></p>
+
+    <!-- Riquadro: richiesta inviata -->
+    <div class="confirm">
+      <div class="confirm__check" aria-hidden="true">&#10003;</div>
+      <p class="confirm__title">Richiesta inviata.</p>
+      <p class="confirm__sub">Ti contatter&ograve; io, direttamente.</p>
+    </div>
+
+    <!-- Lettera -->
+    <article class="letter">
+      <p class="letter__salut">Imprenditore della Brianza,</p>
+
+      <p class="lead">vorrei che altri come te realizzassero la mia stessa visione del marketing.</p>
+
+      <p><strong>Fare marketing ha cambiato e migliorato la mia vita professionale.</strong></p>
+
+      <p>Da studente mi ha permesso di avviarmi nel mondo del lavoro.<br />
+      Dal nulla, nei primi mesi di Covid, mi ha dato accesso ad una delle aziende pi&ugrave; vibranti di Milano.</p>
+
+      <p>Da professionista mi ha permesso di arrivare a collaborazioni prestigiose.<br />
+      In poco tempo ho realizzato contenuti per aziende enormi, alcune nemmeno le posso citare ancora.</p>
+
+      <p>Da proprietario di azienda mi ha permesso di raggiungere i miei obiettivi di crescita.<br />
+      Progetto dopo progetto, &egrave; stata una leva potentissima quando &egrave; stata attiva.</p>
+
+      <p>E come mi ha aiutato?</p>
+
+      <p>Ha portato pi&ugrave; visibilit&agrave;. E pi&ugrave; clienti.</p>
+
+      <p>Il marketing mi ha fatto raggiungere le persone che volevo.<br />
+      Ma non solo: mi ha fatto raggiungere gli obiettivi che volevo.</p>
+
+      <p>Fare marketing cambia e migliora tutte le attivit&agrave; con cui collaboro.</p>
+
+      <p>Per questo...</p>
+
+      <p><strong>Vorrei che altri imprenditori realizzassero la mia stessa visione del marketing.</strong></p>
+
+      <p>E tu, Imprenditore della Brianza, puoi accedere finalmente ad <span class="hl">un esperto vicino a te</span>.</p>
+
+      <p>Non un semplice &ldquo;ragazzo che si occupa del marketing&rdquo; ma una persona con cui far crescere la tua azienda.</p>
+
+      <p>Non una agenzia a cui appoggiarti, ma un esperto con cui relazionarti e creare una struttura potente, profittevole, su misura.</p>
+
+      <p>Credo che ogni Imprenditore serio, che sta costruendo o ha costruito una azienda seria, debba avere un consulente cos&igrave;.<br />
+      Non interno, verrebbe assorbito da troppe logiche che eroderebbero la capacit&agrave; totale del consulente.</p>
+
+      <p>Qualcuno che con occhio vigile ti aiuti a dominare la parte online.</p>
+
+      <p>In Brianza vedo tanti che si muovono.<br />
+      Vivo qui da poco e sto analizzando tutto con occhi freschi.</p>
+
+      <p>E ti dir&ograve; la verit&agrave;...</p>
+
+      <p>I tuoi competitor? Lasciali dove sono. Se iniziamo a lavorare si accorgeranno di te, ti sentiranno.</p>
+
+      <p>E i tuoi colleghi ti chiederanno chi ti segue il marketing, perch&eacute; spacca.</p>
+
+      <p>Quando ti chiamer&ograve; sar&agrave; per capire se ci sono i presupposti per lavorare insieme.<br />
+      <strong>Ho solo due collaborazioni che posso ancora prendere.</strong></p>
+
+      <p>Seguo pochi progetti, e bene.<br />
+      Perch&eacute; in questa era la differenza la fa chi lavora bene.<br />
+      Non chi va pi&ugrave; veloce. Ma chi si sa distinguere.</p>
+
+      <p>Voglio che tu sappia distinguerti.<br />
+      Voglio che scelgano te.</p>
+
+      <p>E se lavoreremo insieme, diventer&agrave; una delle poche scelte possibili per il tuo target.</p>
+
+      <p><strong>Imprenditore della Brianza:</strong><br />
+      Andiamo a fare il culo a questo mercato insieme.</p>
+
+      <p>Ti lascio con una frase che mi guarda ogni giorno mentre lavoro:</p>
+
+      <blockquote>&ldquo;Non devi necessariamente vedere tutta la scala, devi solo fare il primo passo.&rdquo;</blockquote>
+
+      <div class="letter__sign">
+        <p class="bye">A presto,</p>
+        <!-- FIRMA: salvare l'immagine come "firma.png" in questa cartella (sfondo trasparente). -->
+        <img class="letter__signimg" src="firma.png" alt="Riccardo Corsano"
+             onerror="this.style.display='none';document.getElementById('signFallback').style.display='block';" />
+        <p class="name" id="signFallback" style="display:none;">Riccardo</p>
+      </div>
+    </article>
+
+    <a href="index.html" class="back">&#8592; Torna al sito</a>
+
+  </div>
+</body>
+</html>
