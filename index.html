@@ -259,7 +259,7 @@ button { font-family: inherit; cursor: pointer; }
   text-align: center; font-size: 13px; font-weight: 600; letter-spacing: 0.12em;
   text-transform: uppercase; color: var(--ink-soft); margin-bottom: 28px;
 }
-.proof__row { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; max-width: 920px; margin-inline: auto; }
+.proof__row { display: grid; grid-template-columns: repeat(6, 1fr); gap: 16px; max-width: 1080px; margin-inline: auto; }
 .proof__logo {
   display: grid; place-items: center; height: 96px; padding: 18px; overflow: hidden;
   background: var(--white); border: 1px solid var(--line); border-radius: 12px; box-shadow: var(--shadow-soft);
@@ -267,10 +267,10 @@ button { font-family: inherit; cursor: pointer; }
   text-align: center; line-height: 1.2;
 }
 .proof__logo img {
-  max-height: 44px; max-width: 100%; width: auto; object-fit: contain;
-  filter: grayscale(1); opacity: 0.72; transition: filter 0.25s var(--ease), opacity 0.25s var(--ease);
+  max-height: 46px; max-width: 100%; width: auto; object-fit: contain;
+  transition: transform 0.25s var(--ease);
 }
-.proof__logo:hover img { filter: none; opacity: 1; }
+.proof__logo:hover img { transform: scale(1.06); }
 @media (max-width: 900px) { .proof__row { grid-template-columns: repeat(3, 1fr); max-width: 560px; } }
 @media (max-width: 560px) { .proof__row { grid-template-columns: repeat(2, 1fr); gap: 12px; } .proof__logo { height: 82px; padding: 14px; } }
 
@@ -290,7 +290,7 @@ button { font-family: inherit; cursor: pointer; }
   letter-spacing: -0.02em; display: flex; align-items: baseline; justify-content: center;
 }
 .stat__plus { font-size: 0.55em; margin-left: 2px; }
-.stat__label { font-size: 15px; line-height: 1.45; color: var(--on-dark-soft); max-width: 22ch; }
+.stat__label { font-size: 15px; line-height: 1.45; color: var(--on-dark-soft); max-width: 26ch; }
 
 /* ---------- Benefits (numerati) ---------- */
 .benefits { margin-top: 8px; }
@@ -301,7 +301,7 @@ button { font-family: inherit; cursor: pointer; }
 .benefit:first-child { border-top: 1px solid var(--line); }
 .benefit__idx {
   font-family: var(--font-display); font-weight: 900; font-size: 30px;
-  color: var(--gold-dark); line-height: 1; opacity: 0.9; min-width: 48px;
+  color: var(--gold); line-height: 1; min-width: 48px;
 }
 .benefit strong { display: block; font-weight: 700; font-size: 20px; color: var(--ink); margin-bottom: 6px; }
 .benefit span { display: block; color: var(--ink-soft); max-width: 62ch; }
@@ -535,7 +535,7 @@ button { font-family: inherit; cursor: pointer; }
         <div class="hero__grid">
           <div class="hero__content">
             <h1 class="hero__title reveal">Hai costruito un'azienda seria.<br />Meriti un <span class="text-red">marketing</span> all'altezza.</h1>
-            <p class="hero__eyebrow reveal">Per imprenditori della <span class="hl">Brianza</span> con un'azienda che fattura almeno <span class="hl">1.000.000&euro;</span> l'anno</p>
+            <p class="hero__eyebrow reveal">Per imprenditori della <span class="hl">Brianza</span> con un'azienda che fattura almeno <span class="hl">500.000&euro;</span> l'anno</p>
             <p class="hero__sub reveal">Lavoro con pochi imprenditori selezionati per trasformare il marketing da costo a leva di fatturato.<br />Non avrai un'agenzia, ma <span class="mark">un esperto con cui confrontarti</span>, per risultati misurabili.</p>
             <span class="badge-scarcity reveal"><span class="pulse-dot" aria-hidden="true"></span> Posso seguire ancora max 2 progetti in Brianza</span>
             <div class="hero__actions reveal">
@@ -564,6 +564,7 @@ button { font-family: inherit; cursor: pointer; }
         <div class="proof__row">
           <span class="proof__logo" data-name="World Economic Forum"><img src="wef.png" alt="World Economic Forum" loading="lazy" onerror="var p=this.closest('.proof__logo');p.textContent=p.dataset.name;" /></span>
           <span class="proof__logo" data-name="DAZN"><img src="dazn.png" alt="DAZN" loading="lazy" onerror="var p=this.closest('.proof__logo');p.textContent=p.dataset.name;" /></span>
+          <span class="proof__logo" data-name="La Gazzetta dello Sport"><img src="gazzetta.png" alt="La Gazzetta dello Sport" loading="lazy" onerror="var p=this.closest('.proof__logo');p.textContent=p.dataset.name;" /></span>
           <span class="proof__logo" data-name="OneDay"><img src="oneday.png" alt="OneDay" loading="lazy" onerror="var p=this.closest('.proof__logo');p.textContent=p.dataset.name;" /></span>
           <span class="proof__logo" data-name="NBA"><img src="nba.png" alt="NBA" loading="lazy" onerror="var p=this.closest('.proof__logo');p.textContent=p.dataset.name;" /></span>
           <span class="proof__logo" data-name="Netflix"><img src="netflix.png" alt="Netflix" loading="lazy" onerror="var p=this.closest('.proof__logo');p.textContent=p.dataset.name;" /></span>
@@ -586,10 +587,10 @@ button { font-family: inherit; cursor: pointer; }
             </div>
           </figure>
           <div class="prose about__text">
-            <p class="reveal">Mi chiamo Riccardo Corsano.<br /><span class="mark">Vivo a Monza</span>, lavoro da qui, e scelgo i clienti con cui collaborare nel territorio in cui opero.</p>
-            <p class="reveal">Ho iniziato a lavorare nel marketing digitale pi&ugrave; di 8 anni fa.<br />Ho gestito campagne pubblicitarie per aziende nel fitness, nel retail, nel commercio locale.<br />Ho lanciato business, costruito funnel, bruciato qualche budget sbagliato e imparato cosa funziona davvero quando il denaro in gioco &egrave; quello vero.</p>
-            <p class="reveal">Non ho un team di 20 persone.<br />Non ho una sede con la reception e il caff&egrave; in capsula.<br />Ho competenza diretta, esperienza accumulata sul campo e la scelta deliberata di lavorare con pochi clienti, seguiti bene.</p>
-            <p class="reveal">Se cerchi un'agenzia strutturata con un account dedicato che ti risponde entro 48 ore lavorative, ci sono decine di opzioni valide.<br />Se cerchi qualcuno che entra nel merito del tuo business e si fa carico dei risultati, siamo noi a doverci parlare.</p>
+            <p class="reveal">Mi chiamo Riccardo Corsano.<br /><br /><span class="mark">Vivo a Monza</span>, lavoro da qui, e scelgo i clienti con cui collaborare nel territorio in cui opero.</p>
+            <p class="reveal">Ho iniziato a lavorare nel marketing digitale pi&ugrave; di 8 anni fa.<br /><br />Ho gestito campagne pubblicitarie per aziende nel fitness, nel retail, nel commercio locale.<br /><br />Ho lanciato business, costruito funnel, bruciato qualche budget sbagliato e imparato cosa funziona davvero quando il denaro in gioco &egrave; quello vero.</p>
+            <p class="reveal">Non ho un team di 20 persone.<br /><br />Non ho una sede con la reception e il caff&egrave; in capsula.<br /><br />Ho competenza diretta, esperienza accumulata sul campo e la scelta deliberata di lavorare con pochi clienti, seguiti bene.</p>
+            <p class="reveal">Se cerchi un'agenzia strutturata con un account dedicato che ti risponde entro 48 ore lavorative, ci sono decine di opzioni valide.<br /><br />Se cerchi qualcuno che entra nel merito del tuo business e si fa carico dei risultati, siamo noi a doverci parlare.</p>
           </div>
         </div>
       </div>
@@ -731,8 +732,8 @@ button { font-family: inherit; cursor: pointer; }
     <section class="section section--soft">
       <div class="wrap wrap--narrow">
         <span class="connector reveal" aria-hidden="true"></span>
-        <h2 class="h2 reveal">Il marketing per le aziende come la tua non deve essere un problema.<br />Deve essere qualcosa su cui spingere.</h2>
-        <div class="prose">
+        <h2 class="h2 reveal" style="max-width: none; text-align: center;">Il marketing per le aziende come la tua non deve essere un problema.<br />Deve essere qualcosa su cui spingere.</h2>
+        <div class="prose" style="text-align: center;">
           <p class="reveal">Se in passato hai preso un'agenzia, o forse pi&ugrave; di una, ti hanno fatto un bel preventivo.<br />Forse ti hanno parlato di strategie e di obiettivi.<br />Poi per&ograve; qualcosa non ha funzionato: nessuno era davvero responsabile del tuo marketing.<br />Non &egrave; questione di settore, non &egrave; questione di report.<br />&Egrave; che non ci mettevano la faccia e la loro esperienza, io s&igrave;.</p>
           <p class="reveal">Se hai provato con qualcuno che costava poco, beh...<br />Hai capito presto perch&eacute;.</p>
           <p class="reveal">Se i soldi sono usciti e i risultati non sono arrivati: c'&egrave; un problema.</p>
@@ -747,7 +748,7 @@ button { font-family: inherit; cursor: pointer; }
           <div class="fit__col fit__col--yes reveal">
             <h2 class="h2 fit__title">Questo ha senso per te solo se:</h2>
             <ul class="fit__list">
-              <li><span class="fit__mark fit__mark--yes" aria-hidden="true">&#10003;</span> <span>La tua azienda fattura almeno 1.000.000&euro; l'anno e vuoi che il marketing contribuisca davvero a quella cifra, non che la eroda.</span></li>
+              <li><span class="fit__mark fit__mark--yes" aria-hidden="true">&#10003;</span> <span>La tua azienda fattura almeno 500.000&euro; l'anno e vuoi che il marketing contribuisca davvero a quella cifra, non che la eroda.</span></li>
               <li><span class="fit__mark fit__mark--yes" aria-hidden="true">&#10003;</span> <span>Hai gi&agrave; investito in marketing, non ha funzionato come speravi, e vuoi capire perch&eacute; prima di farlo ancora.</span></li>
               <li><span class="fit__mark fit__mark--yes" aria-hidden="true">&#10003;</span> <span>Sei disposto a condividere numeri reali: fatturato, margini, obiettivi.<br />Non si lavora bene senza.</span></li>
               <li><span class="fit__mark fit__mark--yes" aria-hidden="true">&#10003;</span> <span>Vuoi un rapporto diretto, non mediato.<br />Puoi chiamare. Puoi scrivere.<br />Puoi aspettarti una risposta da chi ha preso in mano il tuo progetto.</span></li>
